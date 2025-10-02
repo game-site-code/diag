@@ -1,0 +1,36 @@
+﻿<html>
+    <head>
+        <!--HTML file auto generated using EmulatorJS codehelper-->
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width:100%;height:100%;max-width:100%">
+            <div id="game"></div>
+        </div>
+ <script>
+  EJS_player = '#game';
+  EJS_gameUrl = 'rom.sfc'; // Replace with the actual path to your game ROM
+  EJS_core = 'snes'; // Or any other supported core
+  EJS_gameID = 1; // Unique ID for your game session
+  EJS_oldCores = true; // Enable old cores for netplay compatibility
+</script>
+<script src="https://www.emulatorjs.com/loader.js"></script>
+    
+<script>
+ // ðŸš« Block access if localStorage key is set to "no"
+ if (localStorage.getItem('access') === 'no') {
+     document.body.innerHTML = `
+         <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#111;color:white;font-family:sans-serif;">
+             <h1>Access Denied</h1>
+             <p>You are not allowed to view this page.</p>
+         </div>
+     `;
+     throw new Error('Blocked due to localStorage setting.');
+ }
+</script>
+</html>
